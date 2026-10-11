@@ -18,16 +18,18 @@ export async function loginAsAdmin(
 
     // 4. Envoyer à l’Edge Function
     const response = await fetch(VERIFY_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        address: publicKey,
-        message,
-        signature: signatureBase64,
-      }),
-    })
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer sb_publishable_SP1aF1WoKE27Q1EPfx-7-A_Ml7-tKlC`,
+    'apikey': 'sb_publishable_SP1aF1WoKE27Q1EPfx-7-A_Ml7-tKlC',
+  },
+  body: JSON.stringify({
+    address: publicKey,
+    message,
+    signature: signatureBase64,
+  }),
+})
 
     const data = await response.json()
 
