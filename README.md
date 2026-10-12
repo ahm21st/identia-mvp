@@ -54,6 +54,3 @@ SAS Attestation on Solana
 
 Colosseum Crypto World's Fair Hackathon — Solana track
 
-## Author
-
-Solo builder — full-stack web + Solana integration
